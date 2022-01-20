@@ -1,6 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from './routes/Home'
 import Detail from './routes/Detail'
+import './App.css'
+
 function App() {
   return (<Router>  
     {/* Router 에서는 두개의 Route를 한번에 렌더링 가능

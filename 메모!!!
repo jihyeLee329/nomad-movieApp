@@ -1,0 +1,30 @@
+
+gh-pages  는 결과물을 github pages에 업로드 할 수 있게 해주는 패키지
+웹사이트로 만들어서 무료로 도메인에 뿌려줌
+
+npm i gh-pages
+
+패키지.json 파일에 가서, 
+scripts 에 build를 실행하면 우리 웹사이트의 production ready code를 생성한다.
+ production ready 란 코드가 압축되고 최적화된다는 뜻! 
+ 그럼 build 폴더가 생성되는데, 이거는 내가 만든 모든 파일을 
+ 압축해서 못 생기게 만들어줌.
+ 이제 그 build  폴더를 깃헙에 push 해야하는데 
+ push 하기 전 다시 package.json 폴더로 가서 
+ "homepage": "https://jihyeLee329.github.io/nomad-movieApp"  옵션 추가하고
+ scripts 에 "deploy" : "gh-pages -d build" 
+ //gh-pages라는 패키지 실행시켜서 build 라는 디렉토리 가져가는거임
+
+
+ 근데 난 먼저 build 를 하고 난 다음 deploy 해야 하는걸 기억하고싶지 않기 때문에 
+ "predeploy":"npm run build"
+ 
+ 그럼 이제, deploy를 실행하면 node.js가 predeploy가 먼저 실행시킴
+ 결국 npm run build 가 실행되면 > react-scripts build 가 실행됨 
+ 그럼 코드가 최적화되는 작업 실행되면서 build 폴더 만들어짐. 
+ 그 다음 그 작업이 끝나면 드디어 찐 deploy 명령이 실행됨
+ gh-pages -d build ==> 결국 이 작업은. 
+ gh-pages 가 build 폴더를 아까 적은 hompage에 업로드하는거야!! 
+
+
+

@@ -34,10 +34,10 @@ function Home(){
   //   setLoading(false);
   // },[]);
   return (
-    <div>
+    <div className='movieListWrap'>
       {loading ?
       <h1>Loading...</h1>: 
-      <div>{movies.map((movie)=>
+      <div className='movieList'>{movies.map((movie)=>
          <Movie 
         //  key는 React.js에서만. map 안에서 컴포넌트들을 render할 때 사용
          key={movie.id}
