@@ -28,3 +28,9 @@ scripts 에 build를 실행하면 우리 웹사이트의 production ready code�
 
 
 
+mounting = 태어나는 것과 같음
+constructor->  javascript 에서 class 만들 때 호출되는 자바스느립트 함수 
+
+undating = 업데이트 
+unmounting = component 가 죽는걸 의미함. 컴포넌트가 죽는 때는? = 페이지 바꿀 때 
+state 를 통해서 component 교체하기도 하고 ,, 다양한 방법이 있음 
