@@ -1,8 +1,8 @@
 import "./App.css";
 import React from "react";
 import axios from "axios";
-import Movie from "./Movie";
-import "./App.css";
+import Movie from "./components/Movie";
+import "./components/App.css";
 
 // class component는 class임. but, react component 로부터 확장되고 screen 에 표시됨
 // react 는 자동적으로 class component 의 render method를 실행한다.
